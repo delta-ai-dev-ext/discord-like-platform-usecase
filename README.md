@@ -47,7 +47,7 @@ the output rather than take a claim on trust.
 <img src="assets/system-design.png" alt="System design: six TypeScript services, PostgreSQL per stateful service, Kafka event bus, Clerk for authentication, Resend for email, LiveKit Cloud for voice and video" width="100%" />
 </div>
 
-Six domain-oriented TypeScript services, each a stateless Kubernetes deployment
+Six domain-oriented TypeScript services, each a stateless container deployment
 exposing `/healthz` and `/readyz`:
 
 | Service | Responsibility | State | External |
