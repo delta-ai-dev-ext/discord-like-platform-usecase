@@ -150,6 +150,19 @@ transactional outbox, image attachments, and a fail-closed dependency on
 The whole system in this organisation was produced this way, in a single session:
 eight services plus the system design, as nine pull requests.
 
+## Scope
+
+This is a first pass, published as it came out of the pipeline. The architecture
+and the contracts are sound and the services build and pass their tests, but a
+generated system still benefits from a review pass before it carries real traffic.
+Expect to iterate on edge cases and on behaviour the specification did not pin
+down — for example, `community_service` advertises an `Idempotency-Key` header on
+invite creation that it does not yet act on.
+
+The takeaway is not specific to Delta AI: **AI-generated code is not perfect, and
+it does not remove the need to review it.** Whatever tool produced it, read it,
+test it, and keep iterating until it behaves the way you need.
+
 ## Reuse
 
 Everything here is MIT licensed. Take it, run it, change it, ship it. See
